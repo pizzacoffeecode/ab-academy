@@ -1,0 +1,281 @@
+.home__container {
+  background-color: var(--color-darkgray);
+  overflow-x: hidden;
+}
+
+.page {
+  display: grid;
+  grid-auto-flow: column;
+  width: 100vw;
+
+  grid-template-areas:
+    "vid vid vid"
+    "section1 section1 section1"
+    "section2 section2 section2"
+    ". . .";
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100vh 1fr 1fr 1fr 0fr;
+  /* grid-template-rows: 100vh 1fr 1fr 25vh 1fr 0fr; */
+  /* margin-top: -50px; */
+  z-index: 1;
+}
+
+.home__content_overlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.home__media_container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.home__media_container2 {
+  width: 100vw;
+  z-index: -1;
+}
+
+.head {
+  grid-area: head;
+  background-color: #8ca0ff;
+}
+
+.vid {
+  grid-area: vid;
+  background-color: var(--color-black);
+}
+
+.foot {
+  display: flex;
+  grid-area: foot;
+  background-color: var(--color-black);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+}
+
+.banner__button__container {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 12vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 3;
+}
+
+.banner__button__container::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  margin-bottom: 11.9vh;
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  clip-path: polygon(30.00vw 96.5vh, 100vw 89.00vh, 100vw 87vh, 30.00vw 96.5vh, 0vw 100vh, 100vw 90vh, 100vw 100vh, 0vw 100vh);
+  z-index: 1;
+}
+
+.banner__button {
+  /* padding: 30px 1.5rem 2rem 1.5rem; */
+  /* align-self: center;
+  justify-self: center; */
+}
+
+.video {
+  height: 25vh;
+  z-index: -1;
+}
+
+.app_modal {
+  position: absolute;
+  z-index: 11;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__footer {
+  height: 1rem;
+  margin-top: -50px;
+}
+
+.home__slogan {
+  display: none;
+}
+
+/* 640 */
+@media screen and (min-width: 768px) and (min-height: 500px) {
+  .page {
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100vh 1fr 1fr 1fr 1fr 0fr;
+    /* grid-template-rows: 100vh 1fr 1fr 50vh 1fr 1fr 0fr; */
+
+  }
+
+  .home__media_container {
+    height: 100vh;
+    /* margin-top: -50px; */
+    z-index: 1;
+  }
+
+  .banner__button__container::after {
+    height: 25vh;
+  }
+
+  /* \
+  .home__slogan {
+    position: fixed;
+    display: flex;
+    bottom: 110px;
+    right: 30px;
+    color: var(--color-white);
+    font-size: 2.5rem;
+    transform: rotate(-20deg);
+    font-family: var(--font-quote);
+  } */
+
+  .home__slogan {
+    position: absolute;
+    white-space: nowrap;
+    display: hidden;
+    /* display: flex; */
+    width: 20vw;
+    top: 15px;
+    left: 20px;
+    color: var(--color-white);
+    font-size: 1.8rem;
+    transform: rotate(-7deg);
+    font-family: var(--font-quote);
+  }
+
+  .video {
+    height: 50vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .nav_area {
+  display: grid;
+  grid-area: navbar;
+  z-index: 1;
+} */
+/* 
+.video__section {
+  display: grid;
+  grid-area: video;
+
+} */
+
+/*
+.banner__button__container {
+  display: grid;
+  grid-area: button;
+
+  background-color: var(--color-black);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  bottom: 0.6rem;
+  z-index: 10;
+}
+
+.banner__button {
+  align-self: center;
+  justify-self: center;
+  z-index: 101;
+}
+
+
+.main__content {
+  position: absolute;
+  display: main;
+  grid-area: button;
+  background-color: white;
+  z-index: 2000;
+}
+
+.main__content2 {
+  position: absolute;
+  display: main;
+  grid-area: button;
+  background-color: black;
+  z-index: 2000;
+}
+
+
+
+.contact__section {
+  display: none;
+} */
+
+/* 
+
+
+@media screen and (min-width: 640px) {
+  .banner__button__container {
+    display: none;
+    visibility: hidden;
+  }
+
+  .banner__button {
+
+    display: none;
+    visibility: hidden;
+  }
+}
+
+
+ */
+
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100vh 50vh 30vh;
+  grid-template-areas:
+    "vs vs vs vs vs vs"
+    "tt tt tt tt tt tt"
+    "ff ff ff ff ff ff";
+
+  z-index: 1;
+  margin-top: -8vh;
+}
+
+.video__section {
+  grid-area: vs;
+}
+
+.main__content {
+  grid-area: tt;
+  background-color: bisque;
+}
+
+.main {
+  padding: 4rem 0;
+}
+
+.contact__section {
+  grid-area: ff;
+} */

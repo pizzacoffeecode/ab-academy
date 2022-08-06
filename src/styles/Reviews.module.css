@@ -1,0 +1,41 @@
+.reviews__container {
+    display: grid;
+    grid-template-columns: 0.1fr 10fr 0.1fr;
+    grid-template-rows: 150px 80px 1fr 20px;
+    grid-template-areas:
+        "spc    spc     spc"
+        ".      title   ."
+        "left   middle  right"
+        "foot   foot    foot";
+
+    background-color: var(--color-darkgray);
+}
+
+.review__spacer {
+    display: grid;
+    grid-area: spc;
+}
+
+.review__title {
+    display: grid;
+    grid-area: title;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+.reviews {
+    display: grid;
+    grid-area: middle;
+    justify-content: center;
+}
+
+.about__footer {
+    height: 1rem;
+    margin-top: -50px;
+}
+
+@media screen and (min-width: 640px) {
+    .reviews__container {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}

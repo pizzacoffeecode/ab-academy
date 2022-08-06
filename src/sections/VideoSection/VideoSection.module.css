@@ -1,0 +1,43 @@
+.video__container {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.video__bg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url('../../../'); */
+}
+
+/* .video__image {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-gray);
+} */
+
+
+.video__bg video {
+    width: 100%;
+    height: calc(100vh - 90px);
+    object-fit: cover;
+}
+
+.video__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    Background-image: url('../../../public//assets/images/stripesblack.png');
+    z-index: 1;
+}
+
+
+/* 
+@media screen and (min-width: 768px) {
+
+    .video {}
+
+
+} */

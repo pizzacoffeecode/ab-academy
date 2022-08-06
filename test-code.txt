@@ -1,0 +1,8 @@
+mql.addEventListener('change', (e) => {
+  const mobileView = e.matches;
+  if (mobileView) {
+    setNavInnerHTML(Component1);
+  } else {
+    setNavInnerHTML(Component2);
+  }
+});

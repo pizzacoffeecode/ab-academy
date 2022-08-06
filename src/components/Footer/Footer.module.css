@@ -1,0 +1,49 @@
+.footer__container {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+        ".  .   ."
+        ".  foot ."
+        ".  .   .";
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+
+    align-items: center;
+    align-content: center;
+}
+
+.footer__content {
+    grid-area: foot;
+    text-align: center;
+}
+
+.footer__title {
+    font-weight: 800;
+    font-family: var(--font-title);
+}
+
+/* 
+.footer__address {
+    text-align: center;
+} */
+
+
+.footer__social {
+    align-items: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.navbar__fb_img {
+    min-width: 50px;
+    width: 50px;
+}
+
+.navbar__li_img {
+    min-width: 50px;
+    width: 50px;
+}
+
+.footer__address {
+    min-width: 50px;
+    width: 50px;
+}

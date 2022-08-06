@@ -1,0 +1,21 @@
+.gallery__Container {
+    display: grid;
+    width: 100vw;
+    /* height: 200vh; */
+    /* margin: 1px; */
+    grid-template-areas:
+        "head head head"
+        "slid slid slid"
+        "foot foot foot";
+
+    grid-template-columns: 1fr 10fr 1fr 0fr;
+    grid-template-rows: 0px 100vh 0.5fr;
+}
+
+.gallery__head {
+    grid-area: head;
+}
+
+.gallery__slider {
+    grid-area: slid;
+}

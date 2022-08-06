@@ -1,0 +1,28 @@
+{
+  "name": "abtraining",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "emailjs": "^3.7.0",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.10.2",
+    "hamburger-react": "^2.4.1",
+    "next": "^12.1.0",
+    "nextjs-progressbar": "^0.0.13",
+    "react": "^17.0.2",
+    "react-awesome-slider": "^4.1.0",
+    "react-dom": "^17.0.2",
+    "sass": "^1.49.7",
+    "webpack": "^5.70.0"
+  },
+  "devDependencies": {
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.8"
+  }
+}

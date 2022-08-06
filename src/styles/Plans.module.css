@@ -1,0 +1,77 @@
+.plans__container {
+    display: grid;
+    width: 100vw;
+
+    grid-template-areas:
+        "h"
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "."
+        "f";
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0px;
+
+    background-color: var(--color-white);
+
+}
+
+.plans__head {
+    display: grid;
+    grid-area: h;
+}
+
+
+.plans__card {
+    display: grid;
+    align-self: end;
+    justify-self: center;
+}
+
+.plans__footer {
+    display: grid;
+    grid-area: f;
+}
+
+@media screen and (min-width: 768px) {
+
+    .plans__container {
+        display: grid;
+        grid-template-areas:
+            "h      h"
+            ".      ."
+            ".      ."
+            ".      ."
+            ".      ."
+            ".      ."
+            ".      ."
+            "f      f";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 1fr 1fr 1fr 1fr 1fr 0px;
+        ;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .plans__container {
+        grid-template-areas:
+            "h      h       h"
+            ".      .       ."
+            ".      .       ."
+            ".      .       ."
+            ".      .       ."
+            "f      f       f";
+        grid-template-columns: 3fr 1fr 3fr;
+        grid-template-rows: 150px 1fr 1fr 1fr 1fr 0px;
+    }
+}

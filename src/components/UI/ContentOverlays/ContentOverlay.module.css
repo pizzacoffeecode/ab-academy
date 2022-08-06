@@ -1,0 +1,229 @@
+    .banner__container {}
+
+    .banner__content {}
+
+    .banner__grid {
+        display: grid;
+        grid-template-areas:
+            "head   head    head    head"
+            ".      quot    quot    .   "
+            ".      quot    quot    .   "
+            "foot   foot    foot    foot";
+        grid-template-rows: 20vh 25vh 25vh 30vh;
+        grid-template-columns: 10vw 40vw 40vw 10vw;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner__dropdown {
+        display: none;
+    }
+
+    .banner__contact {
+        display: none;
+    }
+
+    .button__text {
+        position: relative;
+        z-index: 1;
+        font-style: italic;
+        white-space: nowrap;
+    }
+
+    .banner__quote1 {
+        /* background-color: crimson; */
+        display: grid;
+        width: auto;
+
+        height: auto;
+        grid-area: quot;
+
+
+        text-align: center;
+        font-style: italic;
+        /* font-family: var(--font-slogan); */
+        font-family: var(--font-quote);
+
+        opacity: 0%;
+        animation-name: qoute1;
+        animation-duration: 30s;
+        animation-delay: 10s;
+        animation-iteration-count: infinite;
+    }
+
+    .banner__quote1 p {
+        font-size: 30px;
+        color: antiquewhite;
+    }
+
+    .banner__quote2 {
+        display: grid;
+        width: auto;
+
+        height: auto;
+        grid-area: quot;
+
+        font-size: 50px;
+        text-align: center;
+        font-style: italic;
+        /* font-family: var(--font-slogan); */
+        font-family: var(--font-quote);
+
+        opacity: 0%;
+        animation-name: qoute2;
+        animation-delay: 10s;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+    }
+
+    .banner__quote2 p {
+        font-size: 30px;
+        color: antiquewhite;
+    }
+
+    .banner__quote3 {
+        display: grid;
+        width: auto;
+
+        height: auto;
+        grid-area: quot;
+
+        font-size: 50px;
+        text-align: center;
+        font-style: italic;
+        /* font-family: var(--font-slogan); */
+        font-family: var(--font-quote);
+
+        opacity: 0%;
+        animation-name: qoute3;
+        animation-delay: 10s;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+    }
+
+    .banner__quote3 p {
+        font-size: 30px;
+        color: antiquewhite;
+    }
+
+    @media screen and (min-width: 768px) and (min-height: 500px) {
+        .banner__grid {
+            display: grid;
+
+            grid-template-areas:
+                "head   head    head    head    head    head"
+                ".      quot    quot    .       cont    .   "
+                "foot   foot    foot    foot    foot    foot";
+            grid-template-rows: 23vh 50vh 27vh;
+            grid-template-columns: 0.5fr 0.5fr 1.25fr 0.5fr 0.8fr 10vw;
+        }
+
+        .banner__dropdown {
+            display: unset;
+            grid-area: d3;
+        }
+
+        .banner__contact {
+            /* background-color: aqua; */
+            display: grid;
+            width: auto;
+            height: auto;
+            grid-area: cont;
+            opacity: 0;
+
+            animation-name: display;
+            animation-duration: 4s;
+            animation-delay: 8s;
+            animation-fill-mode: forwards;
+        }
+
+        .banner__button {
+            display: none;
+        }
+
+
+        .banner__quote1 p {
+            font-size: 3vw;
+        }
+
+        .banner__quote2 p {
+            font-size: 3vw;
+        }
+
+        .banner__quote3 p {
+            font-size: 3vw;
+        }
+    }
+
+    @keyframes qoute1 {
+        to {
+            opacity: 0%;
+        }
+
+        16% {
+            opacity: 100%;
+        }
+
+        33% {
+            opacity: 0%;
+        }
+
+        from {
+            opacity: 0%;
+        }
+    }
+
+    @keyframes qoute2 {
+        to {
+            opacity: 0%;
+        }
+
+        33% {
+            opacity: 0%;
+        }
+
+        46% {
+            opacity: 100%;
+        }
+
+        66% {
+            opacity: 0%;
+        }
+
+        from {
+            opacity: 0%;
+        }
+    }
+
+    @keyframes qoute3 {
+        to {
+            opacity: 0%;
+        }
+
+        66% {
+            opacity: 0%;
+        }
+
+        82% {
+            opacity: 100%;
+        }
+
+        99% {
+            opacity: 0%;
+        }
+
+        from {
+            opacity: 0%;
+        }
+    }
+
+    @keyframes display {
+        from {
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%;
+        }
+    }

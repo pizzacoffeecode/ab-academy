@@ -1,0 +1,130 @@
+.card__container {
+    position: relative;
+    padding: 2px 8px;
+    height: 355px;
+}
+
+.card_content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "text"
+        "btn";
+    grid-template-rows: 5fr 1fr;
+    width: inherit;
+    height: 96%;
+
+    justify-content: center;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-white);
+    z-index: 1;
+    font-family: var(--font-subtitle);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.card {
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    transition: 0.3s;
+    height: 330px;
+    width: 250px;
+    color: white;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__background {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: #000000; */
+    align-items: center;
+    justify-content: center;
+}
+
+.card__image {
+    position: absolute;
+    z-index: -1;
+}
+
+.card__text {
+    position: relative;
+    z-index: 6;
+}
+
+
+
+
+.card__layout {
+    display: flex;
+    width: 220px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    z-index: -1;
+}
+
+.plan {
+    grid-area: text;
+}
+
+.price {
+    grid-area: text;
+}
+
+.price:before {
+    z-index: 2;
+    content: '$';
+}
+
+.players {
+    grid-area: text;
+}
+
+.discount {
+    grid-area: text;
+}
+
+.discount:before {
+    z-index: 2;
+    content: '$';
+}
+
+.session {
+    grid-area: text;
+}
+
+.practice {
+    grid-area: text;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card__button {
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    z-index: 1;
+
+}
+
+.card__button_text {
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+    font-family: var(--font-salary);
+    font-style: normal;
+    font-weight: 600;
+    white-space: nowrap;
+}

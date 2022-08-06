@@ -1,0 +1,113 @@
+.image_section {
+    display: grid;
+    width: 100vw;
+
+    grid-template-areas:
+        "top top top"
+        ".   img .  "
+        ".   spc .  "
+        ".   txt .  "
+        "bot bot bot";
+
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 0fr 1fr 0.1fr 1fr 0.1fr;
+    background-color: var(--color-darkgray);
+    z-index: 4;
+    /* margin-top: -50px; */
+}
+
+.image_section__top {
+    display: grid;
+    /* background-color: aqua; */
+    grid-area: top;
+}
+
+.image_section__spc {
+    display: grid;
+    /* background-color: gold; */
+    grid-area: spc;
+}
+
+.image_section__left {
+    display: grid;
+
+    /* height: auto; */
+    /* background-color: green; */
+    grid-area: txt;
+    align-items: center;
+    justify-content: center;
+}
+
+.image_section__right {
+    display: grid;
+    /* background-color: rebeccapurple; */
+    grid-area: img;
+
+    /* padding: 1rem 0 2rem 0; */
+    align-items: center;
+    justify-content: center;
+}
+
+
+.image_section__text_container h1 {
+    font-size: 26px;
+    padding-bottom: 10px;
+}
+
+.image_section__text_container p {
+    font-size: 16px;
+}
+
+.image_section__text_container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-self: center;
+}
+
+.image_section__bottom {
+    display: grid;
+
+    /* background-color: yellow; */
+    grid-area: bot;
+}
+
+
+@media screen and (min-width: 640px) {
+    .image_section {
+        display: grid;
+        width: 100vw;
+
+        grid-template-areas:
+            "top top top top top"
+            ".   txt spc   img . "
+            ".   txt spc   img . "
+            "bot bot bot bot bot ";
+
+        grid-template-columns: 1.5fr 10fr 0.25fr 10fr 1.5fr;
+        grid-template-rows: 1fr 4fr 4fr 1fr;
+    }
+
+    .image_section__top {
+        display: grid;
+        /* background-color: aqua; */
+        grid-area: top;
+    }
+
+    .image_section__spc {
+        display: grid;
+        grid-area: spc;
+    }
+
+    .image_section__left {
+        display: grid;
+        grid-area: txt;
+    }
+
+    .image_section__right {
+        display: grid;
+        grid-area: img;
+    }
+
+
+}
